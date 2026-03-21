@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Mariage de [Noms] - Invitation</title>
+    <title>Hudiya & Recep - Düğün Daveti</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -29,7 +29,7 @@
             overflow-x: hidden;
         }
 
-        /* ==================== LANDING PAGE (PORTES) ==================== */
+        /* ==================== LANDING PAGE (KAPILAR) ==================== */
         #landing {
             position: fixed;
             top: 0;
@@ -84,7 +84,6 @@
             box-shadow: inset 10px 0 30px rgba(0,0,0,0.5);
         }
 
-        /* Arabesque sur les portes */
         .arabesque {
             position: absolute;
             width: 80%;
@@ -111,8 +110,8 @@
 
         .landing-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            letter-spacing: 0.5em;
+            font-size: 1.2rem;
+            letter-spacing: 0.4em;
             text-transform: uppercase;
             margin-bottom: 1rem;
             color: var(--gold-light);
@@ -146,6 +145,7 @@
             overflow: hidden;
             transition: all 0.4s ease;
             animation: float 3s ease-in-out infinite;
+            text-transform: uppercase;
         }
 
         @keyframes float {
@@ -174,7 +174,6 @@
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
         }
 
-        /* Particules dorées */
         .particles {
             position: absolute;
             width: 100%;
@@ -200,7 +199,7 @@
             100% { opacity: 0; transform: translateY(-100vh) scale(1.5); }
         }
 
-        /* ==================== SITE PRINCIPAL ==================== */
+        /* ==================== ANA SITE ==================== */
         #main-site {
             display: none;
             opacity: 0;
@@ -212,7 +211,7 @@
             opacity: 1;
         }
 
-        /* ==================== SECTION HERO ==================== */
+        /* ==================== HERO BÖLÜMÜ ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -355,6 +354,8 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         .save-date:hover {
@@ -362,7 +363,7 @@
             color: var(--cream);
         }
 
-        /* ==================== SECTION TEXTES ==================== */
+        /* ==================== DUYGUSAL METİN BÖLÜMÜ ==================== */
         .emotional-text {
             padding: 6rem 2rem;
             max-width: 800px;
@@ -429,7 +430,7 @@
             background-position: center;
         }
 
-        /* ==================== SECTION INFO (MOSQUÉE) ==================== */
+        /* ==================== BİLGİ BÖLÜMÜ (CAMİ KAPISI) ==================== */
         .info-section {
             position: relative;
             padding: 8rem 2rem 4rem;
@@ -501,33 +502,26 @@
             z-index: 2;
         }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            max-width: 1000px;
+        .info-single {
+            max-width: 500px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .info-card {
             background: rgba(255,255,255,0.05);
-            padding: 2rem;
+            padding: 3rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
             position: relative;
             backdrop-filter: blur(10px);
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
+            z-index: 2;
         }
 
-        .info-card.visible {
+        .info-single.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .info-card::before {
+        .info-single::before {
             content: '';
             position: absolute;
             top: 10px;
@@ -538,17 +532,17 @@
             pointer-events: none;
         }
 
-        .info-card h3 {
+        .info-single h3 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
             letter-spacing: 0.2em;
         }
 
         .info-detail {
-            margin: 1rem 0;
-            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
             line-height: 1.8;
         }
 
@@ -558,7 +552,8 @@
             text-transform: uppercase;
             letter-spacing: 0.2em;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
         /* ==================== FOOTER ==================== */
@@ -605,11 +600,12 @@
 
         .footer-blessing {
             font-family: 'Amiri', serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--gold-light);
             font-style: italic;
             margin-top: 1.5rem;
             opacity: 0.9;
+            line-height: 1.8;
         }
 
         .footer-icon {
@@ -619,7 +615,42 @@
             opacity: 0.6;
         }
 
-        /* ==================== SCROLLBAR STYLISH ==================== */
+        /* Music Control */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--emerald);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            background: var(--gold);
+            color: var(--emerald);
+        }
+
+        .music-control.playing {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            50% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+        }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -633,11 +664,6 @@
             border-radius: 5px;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--emerald);
-        }
-
-        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
             .landing-names { font-size: 2.5rem; }
             .hero-names { font-size: 3rem; }
@@ -645,22 +671,24 @@
             .countdown { gap: 1rem; }
             .countdown-item { min-width: 70px; padding: 1rem; }
             .countdown-number { font-size: 1.8rem; }
-            .info-grid { grid-template-columns: 1fr; gap: 2rem; }
             .text-title { font-size: 2rem; }
-        }
-
-        /* Animation de transition douce */
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            .info-single { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Müzik (Türk Düğün Müziği - Instrumental) -->
+    <audio id="weddingMusic" loop preload="auto">
+        <!-- Remplacez cette URL par votre fichier audio local ou une URL directe -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <!-- Alternative: Utilisez une URL YouTube audio ou un fichier local -->
+    </audio>
+
+    <!-- Müzik Kontrol Butonu -->
+    <button class="music-control" id="musicBtn" onclick="toggleMusic()">
+        <span id="musicIcon">🎵</span>
+    </button>
 
     <!-- ==================== LANDING PAGE ==================== -->
     <div id="landing">
@@ -679,123 +707,96 @@
         </div>
         
         <div class="center-content" id="center-content">
-            <div class="landing-title">Le mariage de</div>
-            <div class="landing-names">Sarah & Ahmad</div>
-            <button class="enter-btn" onclick="openDoors()">Entrer</button>
+            <div class="landing-title">Evlilik Töreni</div>
+            <div class="landing-names">Hudiya & Recep</div>
+            <button class="enter-btn" onclick="openDoors()">Giriş</button>
         </div>
     </div>
 
-    <!-- ==================== SITE PRINCIPAL ==================== -->
+    <!-- ==================== ANA SITE ==================== -->
     <div id="main-site">
         
-        <!-- HERO SECTION -->
+        <!-- HERO BÖLÜMÜ -->
         <section class="hero">
             <div class="hero-content" id="hero-content">
-                <div class="hero-subtitle">Le mariage de</div>
-                <h1 class="hero-names">Sarah</h1>
+                <div class="hero-subtitle">Evlilik Töreni</div>
+                <h1 class="hero-names">Hudiya</h1>
                 <span class="hero-ampersand">&</span>
-                <h1 class="hero-names">Ahmad</h1>
+                <h1 class="hero-names">Recep</h1>
                 
                 <div class="islamic-divider"></div>
                 
-                <p class="text-content" style="max-width: 600px; margin: 2rem auto; font-style: italic; color: #666;">
-                    "Et parmi Ses signes il y a ceci : qu'Il a créé pour vous des conjoints parmi vous-mêmes, 
-                    pour que vous trouviez en eux tranquillité et réconfort."
+                <p class="text-content" style="max-width: 700px; margin: 2rem auto; font-style: italic; color: #555; font-size: 1.1rem; line-height: 1.8;">
+                    "Kendileriyle huzur bulasınız diye sizin için türünüzden eşler yaratması ve aranızda bir sevgi ve merhamet var etmesi de O'nun (varlığının ve kudretinin) delillerindendir. Şüphesiz bunda düşünen bir toplum için ibretler vardır."
                 </p>
-                <p style="color: var(--gold); font-size: 0.9rem; margin-top: 1rem;">— Sourate Ar-Rum, verset 21</p>
+                <p style="color: var(--gold); font-size: 0.9rem; margin-top: 1rem; font-weight: bold;">— Rûm Sûresi, 21. Âyet</p>
                 
                 <div class="countdown" id="countdown">
                     <div class="countdown-item">
                         <span class="countdown-number" id="days">00</span>
-                        <div class="countdown-label">Jours</div>
+                        <div class="countdown-label">Gün</div>
                     </div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="hours">00</span>
-                        <div class="countdown-label">Heures</div>
+                        <div class="countdown-label">Saat</div>
                     </div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="minutes">00</span>
-                        <div class="countdown-label">Minutes</div>
+                        <div class="countdown-label">Dakika</div>
                     </div>
                     <div class="countdown-item">
                         <span class="countdown-number" id="seconds">00</span>
-                        <div class="countdown-label">Secondes</div>
+                        <div class="countdown-label">Saniye</div>
                     </div>
                 </div>
                 
-                <div class="hero-date">15 Juin 2025</div>
+                <div class="hero-date">18 Nisan 2026 - Cumartesi</div>
                 
-                <a href="#" class="save-date" onclick="addToCalendar()">Save the Date</a>
+                <a href="#" class="save-date" onclick="addToCalendar()">Tarihi Kaydet</a>
             </div>
         </section>
 
-        <!-- EMOTIONAL TEXT SECTION -->
+        <!-- DUYGUSAL METİN BÖLÜMÜ -->
         <section class="emotional-text">
             <div class="text-block" data-animate>
-                <h2 class="text-title">Une union bénie</h2>
+                <h2 class="text-title">Kutsanmış Bir Birlik</h2>
                 <p class="text-content">
-                    Dans la grâce d'Allah et la joie de nos familles, nous unissons nos vies pour cheminer 
-                    ensemble sur le chemin de la foi et de l'amour. Cette cérémonie religieuse marque 
-                    le début d'une nouvelle vie remplie de baraka et de sérénité.
+                    Allah'ın lütfu ve ailelerimizin sevinci içinde, iman ve sevgi yolunda birlikte yürümek üzere hayatlarımızı birleştiriyoruz. Bu dini tören, bereket ve huzur dolu yeni bir hayatın başlangıcını müjdeliyor.
                 </p>
             </div>
             
             <span class="big-ampersand">&</span>
             
             <div class="text-block" data-animate>
-                <h2 class="text-title">Notre engagement</h2>
+                <h2 class="text-title">Sözümüz</h2>
                 <p class="text-content">
-                    Nous vous invitons à témoigner notre union devant Allah et à partager ce moment 
-                    sacré qui scelle notre amour selon les enseignements de l'Islam. Votre présence 
-                    sera la plus belle des bénédictions pour commencer cette vie à deux.
+                    Sizi Allah katında birliğimize şahit olmaya ve İslam'ın öğretilerine göre sevgimizi mühürleyen bu kutsal anı paylaşmaya davet ediyoruz. Huzurunuz, iki cihan saadetine yelken açtığımız bu yolculukta en güzel bereket olacaktır.
                 </p>
             </div>
         </section>
 
-        <!-- INFO SECTION (MOSQUE ARCH) -->
+        <!-- BİLGİ BÖLÜMÜ (TEK CEREMONİ) -->
         <section class="info-section">
             <div class="mosque-arch"></div>
             <div class="info-container">
-                <h2 class="info-title">Les Cérémonies</h2>
+                <h2 class="info-title">Nikah Töreni</h2>
                 
-                <div class="info-grid">
-                    <div class="info-card" data-animate>
-                        <h3>🕋 Nikkah</h3>
-                        <p class="info-detail">
-                            <span class="info-label">Date</span>
-                            Dimanche 15 Juin 2025
-                        </p>
-                        <p class="info-detail">
-                            <span class="info-label">Heure</span>
-                            14:00
-                        </p>
-                        <p class="info-detail">
-                            <span class="info-label">Lieu</span>
-                            Mosquée de Paris<br>
-                            2 Place du Puits-de-l'Ermite<br>
-                            75005 Paris
-                        </p>
-                    </div>
-                    
-                    <div class="islamic-divider" style="filter: brightness(5); margin: 0 auto;"></div>
-                    
-                    <div class="info-card" data-animate>
-                        <h3>🕌 Réception</h3>
-                        <p class="info-detail">
-                            <span class="info-label">Date</span>
-                            Dimanche 15 Juin 2025
-                        </p>
-                        <p class="info-detail">
-                            <span class="info-label">Heure</span>
-                            19:00
-                        </p>
-                        <p class="info-detail">
-                            <span class="info-label">Lieu</span>
-                            Palais Ottoman<br>
-                            123 Avenue des Lumières<br>
-                            75008 Paris
-                        </p>
-                    </div>
+                <div class="info-single" data-animate>
+                    <h3>🕋 Nikah</h3>
+                    <p class="info-detail">
+                        <span class="info-label">Tarih</span>
+                        18 Nisan 2026 Cumartesi
+                    </p>
+                    <p class="info-detail">
+                        <span class="info-label">Saat</span>
+                        14:00
+                    </p>
+                    <p class="info-detail">
+                        <span class="info-label">Yer</span>
+                        Cotonou Merkez Camii<br>
+                        Avenue de la République<br>
+                        Cotonou, Benin
+                    </p>
                 </div>
             </div>
         </section>
@@ -804,22 +805,43 @@
         <footer class="footer">
             <div class="footer-pattern"></div>
             <div class="footer-content">
-                <div class="footer-thanks">Merci de votre présence</div>
+                <div class="footer-thanks">Huzurlarınız için teşekkür ederiz</div>
                 <div class="footer-icon">❦</div>
-                <p style="opacity: 0.8; line-height: 1.8;">
-                    Votre présence sera la plus belle des marques d'affection.<br>
-                    Que cette union soit source de bénédictions.
+                <p style="opacity: 0.8; line-height: 1.8; font-size: 1.1rem;">
+                    Huzurunuz en güzel sevgi göstergesi olacaktır.<br>
+                    Bu birliğin bereketli olması dileğiyle.
                 </p>
                 <div class="footer-blessing">
-                    "Qu'Allah bénisse cette union<br>
-                    et comble ce mariage de félicité et de sérénité"
+                    "Allah bu birliği kutsasın<br>
+                    ve bu evliliği mutluluk ile doldursun.<br>
+                    Hudiya ve Recep'in yuvasına<br>
+                    huzur ve bereket versin."
                 </div>
             </div>
         </footer>
     </div>
 
     <script>
-        // ==================== ANIMATION OUVERTURE PORTES ====================
+        let musicPlaying = false;
+        const music = document.getElementById('weddingMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        const musicIcon = document.getElementById('musicIcon');
+
+        // Müzik kontrolü
+        function toggleMusic() {
+            if (musicPlaying) {
+                music.pause();
+                musicIcon.textContent = '🔇';
+                musicBtn.classList.remove('playing');
+            } else {
+                music.play().catch(e => console.log('Müzik çalınamadı:', e));
+                musicIcon.textContent = '🎵';
+                musicBtn.classList.add('playing');
+            }
+            musicPlaying = !musicPlaying;
+        }
+
+        // Kapıları açma fonksiyonu
         function openDoors() {
             const leftDoor = document.querySelector('.door-left');
             const rightDoor = document.querySelector('.door-right');
@@ -827,10 +849,23 @@
             const mainSite = document.getElementById('main-site');
             const landing = document.getElementById('landing');
             
-            // Fade out du contenu central
+            // Müziği başlat
+            music.volume = 0.3; // Yumuşak ses
+            music.play().then(() => {
+                musicPlaying = true;
+                musicIcon.textContent = '🎵';
+                musicBtn.classList.add('playing');
+            }).catch(e => {
+                console.log('Müzik otomatik başlatılamadı (tarayıcı politikası):', e);
+            });
+            
+            // Müzik butonunu göster
+            musicBtn.style.display = 'flex';
+            
+            // İçeriği gizle
             centerContent.style.opacity = '0';
             
-            // Animation des portes (effet ouverture)
+            // Kapı animasyonu
             setTimeout(() => {
                 leftDoor.style.transform = 'rotateY(-95deg)';
                 rightDoor.style.transform = 'rotateY(95deg)';
@@ -838,24 +873,22 @@
                 rightDoor.style.opacity = '0.3';
             }, 300);
             
-            // Transition vers le site principal
+            // Ana siteye geçiş
             setTimeout(() => {
                 landing.style.display = 'none';
                 mainSite.classList.add('visible');
                 document.body.style.overflow = 'auto';
                 
-                // Animation du hero après ouverture
                 setTimeout(() => {
                     document.getElementById('hero-content').classList.add('visible');
                     startCountdown();
                 }, 100);
                 
-                // Initialiser les animations au scroll
                 initScrollAnimations();
             }, 2000);
         }
 
-        // ==================== PARTICULES DORÉES ====================
+        // Partiküller
         function createParticles() {
             const container = document.getElementById('particles');
             const particleCount = 30;
@@ -872,10 +905,10 @@
 
         createParticles();
 
-        // ==================== COMPTEUR DYNAMIQUE ====================
+        // Geri sayım
         function startCountdown() {
-            // Date du mariage (à modifier selon vos besoins)
-            const weddingDate = new Date('June 15, 2025 14:00:00').getTime();
+            // 18 Nisan 2026 Cumartesi 14:00
+            const weddingDate = new Date('April 18, 2026 14:00:00').getTime();
             
             function updateCountdown() {
                 const now = new Date().getTime();
@@ -898,7 +931,7 @@
             setInterval(updateCountdown, 1000);
         }
 
-        // ==================== ANIMATIONS AU SCROLL ====================
+        // Scroll animasyonları
         function initScrollAnimations() {
             const observerOptions = {
                 threshold: 0.1,
@@ -914,43 +947,27 @@
                 });
             }, observerOptions);
             
-            document.querySelectorAll('[data-animate], .info-card').forEach(el => {
+            document.querySelectorAll('[data-animate], .info-single').forEach(el => {
                 observer.observe(el);
             });
         }
 
-        // ==================== AJOUTER AU CALENDRIER ====================
+        // Takvime ekleme
         function addToCalendar() {
             const event = {
-                title: 'Mariage de Sarah & Ahmad',
-                date: '20250615T140000',
-                endDate: '20250615T235900',
-                location: 'Mosquée de Paris, 2 Place du Puits-de-l\'Ermite, 75005 Paris',
-                description: 'Nikkah et réception de mariage'
+                title: 'Hudiya & Recep Nikah Töreni',
+                date: '20260418T140000',
+                endDate: '20260418T160000',
+                location: 'Cotonou Merkez Camii, Avenue de la République, Cotonou, Benin',
+                description: 'Nikah töreni - Hudiya ve Recep'
             };
             
-            // Créer un lien Google Calendar
             const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.date}/${event.endDate}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}&sf=true&output=xml`;
             
             window.open(googleCalendarUrl, '_blank');
         }
 
-        // Empêcher le scroll sur la landing page
         document.body.style.overflow = 'hidden';
-
-        // Smooth scroll pour ancres internes
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>
