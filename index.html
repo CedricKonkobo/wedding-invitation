@@ -29,7 +29,6 @@
             overflow-x: hidden;
         }
 
-        /* ==================== LANDING PAGE (KAPILAR) ==================== */
         #landing {
             position: fixed;
             top: 0;
@@ -199,7 +198,6 @@
             100% { opacity: 0; transform: translateY(-100vh) scale(1.5); }
         }
 
-        /* ==================== ANA SITE ==================== */
         #main-site {
             display: none;
             opacity: 0;
@@ -211,7 +209,6 @@
             opacity: 1;
         }
 
-        /* ==================== HERO BÖLÜMÜ ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -363,7 +360,6 @@
             color: var(--cream);
         }
 
-        /* ==================== DUYGUSAL METİN BÖLÜMÜ ==================== */
         .emotional-text {
             padding: 6rem 2rem;
             max-width: 800px;
@@ -430,7 +426,6 @@
             background-position: center;
         }
 
-        /* ==================== BİLGİ BÖLÜMÜ (CAMİ KAPISI) ==================== */
         .info-section {
             position: relative;
             padding: 8rem 2rem 4rem;
@@ -556,7 +551,6 @@
             font-weight: bold;
         }
 
-        /* ==================== FOOTER ==================== */
         .footer {
             background: var(--deep-black);
             color: var(--cream);
@@ -615,7 +609,6 @@
             opacity: 0.6;
         }
 
-        /* Music Control */
         .music-control {
             position: fixed;
             bottom: 20px;
@@ -678,19 +671,17 @@
 </head>
 <body>
 
-    <!-- Müzik (Türk Düğün Müziği - Instrumental) -->
+    <!-- Musique turque ottomane romantique (démarre au clic sur Giriş) -->
     <audio id="weddingMusic" loop preload="auto">
-        <!-- Remplacez cette URL par votre fichier audio local ou une URL directe -->
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        <!-- Alternative: Utilisez une URL YouTube audio ou un fichier local -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_9939f792cb.mp3?filename=ottoman-120520.mp3" type="audio/mpeg">
+        <!-- Si la musique ne marche pas, remplacez le lien ci-dessus par votre propre fichier: -->
+        <!-- <source src="votre-musique-turc.mp3" type="audio/mpeg"> -->
     </audio>
 
-    <!-- Müzik Kontrol Butonu -->
     <button class="music-control" id="musicBtn" onclick="toggleMusic()">
         <span id="musicIcon">🎵</span>
     </button>
 
-    <!-- ==================== LANDING PAGE ==================== -->
     <div id="landing">
         <div class="particles" id="particles"></div>
         
@@ -713,10 +704,8 @@
         </div>
     </div>
 
-    <!-- ==================== ANA SITE ==================== -->
     <div id="main-site">
         
-        <!-- HERO BÖLÜMÜ -->
         <section class="hero">
             <div class="hero-content" id="hero-content">
                 <div class="hero-subtitle">Evlilik Töreni</div>
@@ -756,7 +745,6 @@
             </div>
         </section>
 
-        <!-- DUYGUSAL METİN BÖLÜMÜ -->
         <section class="emotional-text">
             <div class="text-block" data-animate>
                 <h2 class="text-title">Kutsanmış Bir Birlik</h2>
@@ -775,7 +763,6 @@
             </div>
         </section>
 
-        <!-- BİLGİ BÖLÜMÜ (TEK CEREMONİ) -->
         <section class="info-section">
             <div class="mosque-arch"></div>
             <div class="info-container">
@@ -801,7 +788,6 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-pattern"></div>
             <div class="footer-content">
@@ -827,7 +813,6 @@
         const musicBtn = document.getElementById('musicBtn');
         const musicIcon = document.getElementById('musicIcon');
 
-        // Müzik kontrolü
         function toggleMusic() {
             if (musicPlaying) {
                 music.pause();
@@ -841,7 +826,6 @@
             musicPlaying = !musicPlaying;
         }
 
-        // Kapıları açma fonksiyonu
         function openDoors() {
             const leftDoor = document.querySelector('.door-left');
             const rightDoor = document.querySelector('.door-right');
@@ -849,23 +833,19 @@
             const mainSite = document.getElementById('main-site');
             const landing = document.getElementById('landing');
             
-            // Müziği başlat
-            music.volume = 0.3; // Yumuşak ses
+            music.volume = 0.3;
             music.play().then(() => {
                 musicPlaying = true;
                 musicIcon.textContent = '🎵';
                 musicBtn.classList.add('playing');
             }).catch(e => {
-                console.log('Müzik otomatik başlatılamadı (tarayıcı politikası):', e);
+                console.log('Müzik otomatik başlatılamadı:', e);
             });
             
-            // Müzik butonunu göster
             musicBtn.style.display = 'flex';
             
-            // İçeriği gizle
             centerContent.style.opacity = '0';
             
-            // Kapı animasyonu
             setTimeout(() => {
                 leftDoor.style.transform = 'rotateY(-95deg)';
                 rightDoor.style.transform = 'rotateY(95deg)';
@@ -873,7 +853,6 @@
                 rightDoor.style.opacity = '0.3';
             }, 300);
             
-            // Ana siteye geçiş
             setTimeout(() => {
                 landing.style.display = 'none';
                 mainSite.classList.add('visible');
@@ -888,7 +867,6 @@
             }, 2000);
         }
 
-        // Partiküller
         function createParticles() {
             const container = document.getElementById('particles');
             const particleCount = 30;
@@ -905,9 +883,7 @@
 
         createParticles();
 
-        // Geri sayım
         function startCountdown() {
-            // 18 Nisan 2026 Cumartesi 14:00
             const weddingDate = new Date('April 18, 2026 14:00:00').getTime();
             
             function updateCountdown() {
@@ -931,7 +907,6 @@
             setInterval(updateCountdown, 1000);
         }
 
-        // Scroll animasyonları
         function initScrollAnimations() {
             const observerOptions = {
                 threshold: 0.1,
@@ -952,7 +927,6 @@
             });
         }
 
-        // Takvime ekleme
         function addToCalendar() {
             const event = {
                 title: 'Hudiya & Recep Nikah Töreni',
