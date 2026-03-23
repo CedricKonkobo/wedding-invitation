@@ -671,11 +671,9 @@
 </head>
 <body>
 
-    <!-- Musique turque ottomane romantique (démarre au clic sur Giriş) -->
+    <!-- Musique locale music.mp3 dans le même dossier -->
     <audio id="weddingMusic" loop preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_9939f792cb.mp3?filename=ottoman-120520.mp3" type="audio/mpeg">
-        <!-- Si la musique ne marche pas, remplacez le lien ci-dessus par votre propre fichier: -->
-        <!-- <source src="votre-musique-turc.mp3" type="audio/mpeg"> -->
+        <source src="music.mp3" type="audio/mpeg">
     </audio>
 
     <button class="music-control" id="musicBtn" onclick="toggleMusic()">
@@ -833,6 +831,8 @@
             const mainSite = document.getElementById('main-site');
             const landing = document.getElementById('landing');
             
+            // Démarrer la musique à 2 minutes 32 secondes (152 secondes)
+            music.currentTime = 152;
             music.volume = 0.3;
             music.play().then(() => {
                 musicPlaying = true;
